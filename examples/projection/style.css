@@ -1,0 +1,15 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+}
+
+#map3857,
+#map4326 {
+  width: 50%;
+  height: 100vh;
+}
