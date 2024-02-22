@@ -7,7 +7,7 @@ import { Vector as VectorLayer } from "ol/layer.js";
 import Control from "ol/control/Control";
 
 /**
- * Создаём свой класс контрола, наследуясь от Control
+ * Создаем свой класс контрола как дочерний от Control
  */
 export class GeolocationControl extends Control {
   // При обновлении геометрии в фичах, автоматически произойдёт перерисовка слоя карты
@@ -28,7 +28,7 @@ export class GeolocationControl extends Control {
     button.addEventListener("click", this._handleClick.bind(this));
 
     // Подготавливаем класс, отслеживающий геолокацию
-    // Является обёрткой над Geolocation API
+    // Является оберткой над Geolocation API
     // @see https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
     const geolocation = new Geolocation({ trackingOptions: { enableHighAccuracy: true } });
     geolocation.on("error", (error) => {
