@@ -1,0 +1,27 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.control-geolocation {
+  left: 0.5em;
+  top: 4em;
+}
+
+.control-geolocation button {
+  cursor: pointer;
+  padding: 2px;
+}
+
+.control-geolocation img {
+  max-width: 100%;
+  max-height: 100%;
+}
