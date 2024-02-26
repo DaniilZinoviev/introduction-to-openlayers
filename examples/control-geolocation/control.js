@@ -1,7 +1,7 @@
 import Feature from "ol/Feature.js";
 import Geolocation from "ol/Geolocation.js";
 import Point from "ol/geom/Point.js";
-import { Circle as CircleStyle, Fill, Stroke, Style } from "ol/style.js";
+import { Icon, Style } from "ol/style.js";
 import { Vector as VectorSource } from "ol/source.js";
 import { Vector as VectorLayer } from "ol/layer.js";
 import Control from "ol/control/Control";
@@ -49,10 +49,9 @@ export class GeolocationControl extends Control {
     // Добавляем чуть более красивых стилей
     this.positionFeature.setStyle(
       new Style({
-        image: new CircleStyle({
-          radius: 6,
-          fill: new Fill({ color: "#3399CC" }),
-          stroke: new Stroke({ color: "#fff", width: 2 }),
+        image: new Icon({
+          width: 36,
+          src: "/public/icons/human.svg",
         }),
       })
     );
