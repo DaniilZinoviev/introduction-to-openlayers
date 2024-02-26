@@ -36,3 +36,7 @@ const interaction = new Modify({
   source: source,
 });
 map.addInteraction(interaction);
+
+interaction.on('modifyend', (event) => {
+  console.log(event.features);
+})
