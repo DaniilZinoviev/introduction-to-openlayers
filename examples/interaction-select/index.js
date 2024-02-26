@@ -59,8 +59,12 @@ map.addOverlay(popupOverlay);
 // Опционально: добавим оверлей сверху над выделенной геометрией
 interaction.on("select", (event) => {
   const feature = event.selected[0];
+  if (!feature) {
+    popupOverlay.setPosition(undefined);
+    return;
+  }
   const center = getCenter(feature.getGeometry().getExtent());
   const title = feature.getProperties().name;
-  popupOverlay.setPosition(center);
   popup.querySelector("#title").textContent = title;
+  popupOverlay.setPosition(center);
 });
