@@ -6,7 +6,7 @@ import { Overlay } from "ol";
 import airports from "./airports.json";
 
 const map = new Map({
-  layers: [new TileLayer({ source: new OSM() })],
+  layers: [new TileLayer({ source: new OSM(), opacity: 0.7 })],
   target: document.getElementById("map"),
   view: new View({ center: [4194913.233065522, 7506074.673079068], zoom: 9 }),
 });
