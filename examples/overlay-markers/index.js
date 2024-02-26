@@ -16,7 +16,7 @@ const popup = document.getElementById("popup").cloneNode(true);
 const popupOverlay = new Overlay({
   element: popup,
   positioning: "bottom-center",
-  offset: [0, -36],
+  offset: [0, -42],
 });
 map.addOverlay(popupOverlay);
 
