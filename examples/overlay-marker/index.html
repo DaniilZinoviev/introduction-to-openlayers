@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Image source: https://github.com/openlayers/openlayers -->
+    <link rel="icon" type="image/svg+xml" href="https://openlayers.org/theme/img/logo-dark.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/node_modules/ol/ol.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Примеры OpenLayers</title>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script type="module" src="./index.js"></script>
+
+    <!-- Шаблон маркера -->
+    <template id="marker">
+      <img width="36" src="/public/icons/marker.svg" alt="Marker" />
+    </template>
+
+    <!-- Шаблон попапа -->
+    <template id="popup">
+      <div class="popup">
+        <p>Головной офис БФТ-Холдинг</p>
+        <p>129085, г. Москва, ст. м. «Алексеевская» ул. Годовикова, д. 9, стр. 17</p>
+      </div>
+    </template>
+  </body>
+</html>
