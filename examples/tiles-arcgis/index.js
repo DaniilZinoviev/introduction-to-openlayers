@@ -5,7 +5,10 @@ import TileLayer from "ol/layer/Tile";
 const map = new Map({
   target: document.getElementById("map"),
   layers: [
+    // Мы используем тот же TileLayer, но с другим источником данных (source)
     new TileLayer({
+      // Многие тайлы построены на принципе передачи z,x,y для получения нужных тайлов
+      // Для того, что бы добавить для них поддержку, достаточно использовать класс XYZ с плейсхолдерами
       source: new XYZ({
         attributions:
           'Tiles © <a href="https://services.arcgisonline.com/ArcGIS/' +
